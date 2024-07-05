@@ -1,0 +1,109 @@
+:root{
+    --primary-color: #FFF;
+    --second-color: #1B1B1B;
+    --third-color: #00FF00;
+    --fourth-color : rgba(245, 127, 35, 0.42);
+    --common-font: "Oswald", sans-serif;;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--common-font);
+}
+
+
+
+body {
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h3 {
+    color: var(--primary-color);
+}
+
+form {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 2px solid var(--fourth-color);
+    border-radius: 10px;
+    background-color: black;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-search {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--fourth-color);
+    border-radius: 5px;
+    background-color: black;
+    color: #00FF00;
+}
+
+.btn-user {
+    padding: 10px 20px;
+    border: 2px solid var(--fourth-color);
+    border-radius: 5px;
+    background-color: black;
+    color: #00FF00;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-user:hover {
+    background-color: var(--primary-color);
+    color: black;
+}
+
+.container {
+    width: 80%;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 2px solid var(--fourth-color);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: black;
+    color: var(--third-color);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}

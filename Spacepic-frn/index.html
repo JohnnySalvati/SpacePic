@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpacePic - Todo sobre el espacio exterior</title>
+
+    <link rel="icon" href="./static/img/favicon.ico">
+    <!--  Fonts     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/style.css">
+
+
+    <script src="https://kit.fontawesome.com/d8f3a410ed.js" crossorigin="anonymous"></script><!--  Uso de FontAwesome para iconos SVG -->    
+</head>
+<body>
+    <header>
+        <div class="containerMenu">
+            <div>
+                <a href="./index.html">                
+                    <img src="./static/img/logo.png" alt="Logo" class="logoImg">
+                    <span class="logoFont">
+                        SPACEPIC
+                    </span>
+                </a>
+            </div>
+            <div>
+                <div class="menuMobileList">
+                    <img src="./static/img/listaMenu.png" alt="Logo" id="imgMobileListID" class="imgClick" onclick="ShowHideMenu()">
+                </div>                       
+                <nav id="navStyleId" class="navStyle">
+                    <a href="">Home</a>
+                    <a href="#grid">Imagenes/Cuadros</a>
+                    <a href="#contacto">Contacto</a>
+                    <a href="#testimonios">Nosotros</a>
+                    <a href="#modalRegistro" onclick="mostrarModal()">Ingresar</a> 
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner-home">
+            <div class="banner-card">
+                <h1><span>Soñá sin Fronteras</span></h1>
+            </div>
+        </section>
+
+          <!-- GRID Section 1 -->
+        <section id="grid">
+            <h3>Elegí tu cuadro</h3>
+            <h4>Lo personalizamos a tu gusto, tenemos el mejor catálogo</h4>
+            <div class="grid-container">
+
+                <!-- La funcion gridBuild() inyecta en este lugar el codigo HTML para construir el grid -->
+
+            </div>
+        </section>  
+
+        <!-- CARROUSEL Section 2 -->
+        
+        <section id="carrousel">
+            <div class="carrouselContainer">
+                <div class="carrouselBotoneraTitulo">
+                    <h3>NUESTROS TRABAJOS</h3>
+                    <div class="corrouselBotonera">
+                        <i id="slideBack" class="fa-solid fa-circle-arrow-left"></i>
+                        <i id="slide" class="fa-solid fa-circle-arrow-right"></i>
+                    </div>
+
+                </div>                    
+                <div id="slider" class="slider-pictures">
+                    <ul >
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg1.jpeg" alt="" class="img-slider-home">
+                        </li>
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg3.jpeg" alt="" class="img-slider-home">
+                        </li>
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg4.jpeg" alt="" class="img-slider-home">
+                        </li>
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg5.jpeg" alt="" class="img-slider-home">
+                        </li>
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg6.jpeg" alt="" class="img-slider-home">
+                        </li>
+                        <li  class="slider-picture-picture">
+                            <img src="./static/img/spaimg7.webp" alt="" class="img-slider-home">
+                        </li>
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg8.webp" alt="" class="img-slider-home">
+                        </li>
+                        <li  class="slider-picture-picture">
+                            <img src="./static/img/spaimg9.webp" alt="" class="img-slider-home">
+                        </li>
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg10.webp" alt="" class="img-slider-home">
+                        </li>                         
+                        <li class="slider-picture-picture">
+                            <img src="./static/img/spaimg11.webp" alt="" class="img-slider-home">
+                        </li>                                               
+                    </ul>
+                </div>
+               
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS  Section 3 -->
+
+        <section id="testimonios">
+            <div class="divTestimonios parallax">
+                <div class="contenidoTestimonio">
+                    <h3>Nosotros</h3>
+                    <p>Nacimos como una solución a una necesidad insatisfecha del mercado.</p> 
+                    <p>Desde la NASA a su casa.</p>
+                </div>
+                <div class="casosExitodiv">
+                    <h3>Nuestros Clientes</h3>
+                    <div class="casosExitoTestimonioContainer">
+                        <div class="casosExito">
+                            <p>"Son geniales nos llegaron los cuadros en tiempo y forma.</p> 
+                            <p>Esperamos pronto hacer otro pedido..."</p>
+                            <p><span>Lucas - 40 años</span></p>
+                        </div>
+                        <div class="casosExito">
+                            <p>"Los encontramos por redes sociales y vimos los trabajos.</p> 
+                            <p>Sinceramente no defraudaron..."</p>
+                            <p><span>Juan - 23 años</span></p>
+                        </div>                    
+                    </div>                
+                </div>                    
+            </div>
+        </section>
+
+        <!-- CONTACTO  Section 4 -->
+        
+
+        <section id="contacto">
+            <div class="containerContacto">
+                <form id="contactForm" onsubmit="return validarFormulario()">
+                    <div class="containerDatos">
+                        <div class="datos">
+                            <div class="agrupadoContactoDatos">
+                                <label for="nombre">Nombre: </label>
+                                <input type="text" id="nombre" name="nombre" >
+                                <div class="nombre-error error"></div>
+                            </div>
+                            <div class="agrupadoContactoDatos">
+                                <label for="email">Mail: </label>
+                                <input type="email" id="email" name="email" >
+                                <div class="email-error error"></div>
+                            </div>
+                            <div class="agrupadoContactoDatos">
+                                <label for="telefono">Telefono: </label>
+                                <input type="text" id="telefono" name="telefono" >
+                                <div class="telefono-error error"></div>
+                            </div>                        
+                        </div>
+                        <div class="agrupadoContactoComentario">
+                            <h2>Hablemos!</h2>
+                            <!-- <label for="comentario">Hablemos! </label>    -->
+                            <textarea id="comentario" name="comentario" rows="10" cols="50" placeholder="Escribir aquí el mensaje..."></textarea>
+                            <div class="comentario-error error"></div>
+                        </div>
+                    </div>
+                    <div class="datos2">
+                        <div class="agrupadoContactoComentario">
+                            <span>Adjuntar imagen</span>
+                            <label for="file" class="fakeFile">
+                                <i class="fa fa-cloud-upload"></i> Seleccionar Archivo
+                            </label>
+                            <input id="file" type="file">
+                            <div class="file-error error"></div>
+                        </div>
+                        <div class="agrupadoContactoComentario">
+                            <input type="checkbox" id="suscripcion" name="suscripcion">
+                            <label for="suscripcion">Acepto terminos y condiciones.</label>
+                            <div class="suscripcion-error error"></div>
+                        </div>
+                        
+                    </div>
+                    <button name="registrarse">Contactenme</button> 
+                </form>            
+                
+            </div>
+        </section>
+
+    </main>
+
+   
+    <footer>
+        <div class="divFooter">
+            <div class="mapFooter">
+                <h4>MAPA DEL SITIO</h4>
+                <nav>
+                    <ul class="ulFooter">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="#grid">Imagenes/Cuadros</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#testimonios">Nosotros</a></li>
+                        <li><a href="#modalRegistro" onclick="mostrarModal()">Ingresar</a></li>
+                        <li><a href="/templates/crud-registro.html">CRUD</a></li>
+                    </ul>
+                </nav>
+            </div>            
+            <div class="contactFooter">
+                <h4>CONTACTO</h4>
+                <a href="mailto:info@spacepi.com"><p>info@spacepic.com</p></a>
+                <div class="telFooter">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i>
+                        <p>011-1111-1111</p>
+                    </a>
+                </div>
+                <div class="divRedesFooter">
+                    <h4>REDES SOCIALES</h4>
+                    <nav class="iconsFooterSM">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                    </nav>
+                </div>
+            </div>
+        </div>   
+        <p class="copyrightFooter">Todos los Derechos Reservados <span>SPACEPIC 2024</span>.</p>        
+    </footer>
+
+
+    <!-- Modal de Registro -->
+    <div id="modalRegistro" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>REGISTRO</h2>
+            <form class="formRegistro">
+                <div>
+                    <label for="Nombre">Nombre: </label>
+                    <input type="text" id="Nombre" name="lblnombre" required>
+                </div>
+                <div>
+                    <label for="Email">Email: </label>
+                    <input type="email" id="Email" name="email" required>
+                </div>
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </div>  
+    <script src="./static/js/index.js"></script>
+
+</body>
+</html>
